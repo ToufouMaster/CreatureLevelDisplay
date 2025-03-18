@@ -70,7 +70,8 @@ void __declspec(naked) DisplaNameInjection() {
 
         //custom code
         mov eax, [esp + 0x24] // 0x8
-        mov ebx, [edi + 0x8006D0]
+        mov ebx, [esp + 0x58]
+        mov ebx, [ebx]
         push ebx
         push eax
 
